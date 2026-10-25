@@ -1,0 +1,46 @@
+# =====================================================================
+# Threat model — DRAFT (finalised and enforced in code in Module 5)
+#
+# tier:
+#   easy        cheap for the attacker to change
+#   costly      possible, but needs extra resources
+#   impossible  history the attacker cannot rewrite (never changed)
+#   derived     recomputed from raw fields; never edited directly
+#
+# cost: abstract units per change (ASSUMPTIONS — we run a sensitivity
+#       analysis so conclusions do not hinge on these exact values)
+# =====================================================================
+
+features:
+  # ---------- easy ----------
+  TransactionAmt: {tier: easy, type: numeric, cost: 0.0, note: "attacker picks amount; lowering it reduces loot instead"}
+  hour:           {tier: easy, type: numeric, cost: 1.0, note: "attacker chooses when to submit"}
+  P_emaildomain:  {tier: easy, type: categorical, cost: 1.0, note: "new email account in minutes"}
+  R_emaildomain:  {tier: easy, type: categorical, cost: 1.0}
+  DeviceType:     {tier: easy, type: categorical, cost: 2.0, note: "emulator / different device"}
+  DeviceInfo:     {tier: easy, type: categorical, cost: 2.0, group: device}
+  id_30:          {tier: easy, type: categorical, cost: 2.0, group: device, note: "OS string"}
+  id_31:          {tier: easy, type: categorical, cost: 1.0, note: "browser string"}
+  id_33:          {tier: easy, type: categorical, cost: 1.0, note: "screen resolution"}
+
+  # ---------- costly ----------
+  card_profile:   {tier: costly, type: bundle, cost: 30.0, members: [card1, card2, card3, card4, card5, card6],
+                   note: "requires a different compromised card; swapped as one real profile"}
+  addr1:          {tier: costly, type: categorical, cost: 20.0, group: address}
+  addr2:          {tier: costly, type: categorical, cost: 20.0, group: address}
+  dist1:          {tier: costly, type: numeric, cost: 10.0, note: "needs proxy / location infrastructure"}
+  dist2:          {tier: costly, type: numeric, cost: 10.0}
+  id_23:          {tier: costly, type: categorical, cost: 8.0, note: "proxy flag"}
+  ProductCD:      {tier: costly, type: categorical, cost: 15.0, note: "limits what can be bought and resold"}
+  M1_M9:          {tier: costly, type: bundle, cost: 25.0, members: [M1, M2, M3, M4, M5, M6, M7, M8, M9],
+                   note: "match flags need a full matching identity"}
+
+  # ---------- impossible (patterns) ----------
+  impossible_patterns: ["^C\\d+$", "^D\\d+$", "^V\\d+$", "^TransactionDT$"]
+
+  # ---------- derived (filled in Module 3) ----------
+  derived_patterns: ["^uid_", "^vel_", "^amt_vs_"]
+
+validity:
+  numeric_range_quantiles: [0.01, 0.99]   # changes must stay inside legit traffic range
+  categories_from: train_legit            # only category values seen in legit training data

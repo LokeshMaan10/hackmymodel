@@ -1,0 +1,30 @@
+# Data and models — never commit (Kaggle rules + size)
+data/raw/*
+data/interim/*
+data/processed/*
+models/*
+!**/.gitkeep
+*.csv
+*.parquet
+*.zip
+
+# Kaggle credentials
+kaggle.json
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
