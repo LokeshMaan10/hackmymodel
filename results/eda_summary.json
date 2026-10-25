@@ -1,0 +1,567 @@
+{
+  "class_balance": {
+    "rows": 590540,
+    "frauds": 20663,
+    "legit": 569877,
+    "fraud_rate": 0.03499000914417313,
+    "legit_per_fraud": 27.579586700866283
+  },
+  "split": [
+    {
+      "index": "train",
+      "rows": 410601,
+      "fraud_rate": 0.0351168166,
+      "identity_coverage": 0.2663826927,
+      "first_day": 1,
+      "last_day": 119
+    },
+    {
+      "index": "val",
+      "rows": 85303,
+      "fraud_rate": 0.0347232805,
+      "identity_coverage": 0.1772036153,
+      "first_day": 120,
+      "last_day": 149
+    },
+    {
+      "index": "test",
+      "rows": 94636,
+      "fraud_rate": 0.0346802485,
+      "identity_coverage": 0.2085886977,
+      "first_day": 150,
+      "last_day": 182
+    }
+  ],
+  "amount_buckets": [
+    {
+      "TransactionAmt": "[0.0, 25.0)",
+      "count": 43329,
+      "frauds": 3019,
+      "fraud_rate": 0.0696761984
+    },
+    {
+      "TransactionAmt": "[25.0, 50.0)",
+      "count": 144186,
+      "frauds": 4461,
+      "fraud_rate": 0.0309392035
+    },
+    {
+      "TransactionAmt": "[50.0, 100.0)",
+      "count": 160742,
+      "frauds": 4618,
+      "fraud_rate": 0.028729268
+    },
+    {
+      "TransactionAmt": "[100.0, 200.0)",
+      "count": 141813,
+      "frauds": 3999,
+      "fraud_rate": 0.0281991073
+    },
+    {
+      "TransactionAmt": "[200.0, 500.0)",
+      "count": 76146,
+      "frauds": 3417,
+      "fraud_rate": 0.0448743204
+    },
+    {
+      "TransactionAmt": "[500.0, 1000.0)",
+      "count": 16744,
+      "frauds": 962,
+      "fraud_rate": 0.0574534161
+    },
+    {
+      "TransactionAmt": "[1000.0, 5000.0)",
+      "count": 7562,
+      "frauds": 186,
+      "fraud_rate": 0.0245966675
+    },
+    {
+      "TransactionAmt": "[5000.0, inf)",
+      "count": 18,
+      "frauds": 1,
+      "fraud_rate": 0.0555555556
+    }
+  ],
+  "cents": [
+    {
+      "index": "has_cents",
+      "count": 284878,
+      "frauds": 9704,
+      "fraud_rate": 0.0340637045
+    },
+    {
+      "index": "whole_dollar",
+      "count": 305662,
+      "frauds": 10959,
+      "fraud_rate": 0.0358533282
+    }
+  ],
+  "categorical": {
+    "ProductCD": [
+      {
+        "ProductCD": "w",
+        "count": 439670,
+        "frauds": 8969,
+        "fraud_rate": 0.0203993905
+      },
+      {
+        "ProductCD": "c",
+        "count": 68519,
+        "frauds": 8008,
+        "fraud_rate": 0.1168726922
+      },
+      {
+        "ProductCD": "r",
+        "count": 37699,
+        "frauds": 1426,
+        "fraud_rate": 0.037825937
+      },
+      {
+        "ProductCD": "h",
+        "count": 33024,
+        "frauds": 1574,
+        "fraud_rate": 0.0476623062
+      },
+      {
+        "ProductCD": "s",
+        "count": 11628,
+        "frauds": 686,
+        "fraud_rate": 0.058995528
+      }
+    ],
+    "card4": [
+      {
+        "card4": "visa",
+        "count": 384767,
+        "frauds": 13373,
+        "fraud_rate": 0.0347560991
+      },
+      {
+        "card4": "mastercard",
+        "count": 189217,
+        "frauds": 6496,
+        "fraud_rate": 0.0343309533
+      },
+      {
+        "card4": "american express",
+        "count": 8328,
+        "frauds": 239,
+        "fraud_rate": 0.028698367
+      },
+      {
+        "card4": "discover",
+        "count": 6651,
+        "frauds": 514,
+        "fraud_rate": 0.0772816118
+      },
+      {
+        "card4": "missing",
+        "count": 1577,
+        "frauds": 41,
+        "fraud_rate": 0.0259987318
+      }
+    ],
+    "card6": [
+      {
+        "card6": "debit",
+        "count": 439938,
+        "frauds": 10674,
+        "fraud_rate": 0.0242625097
+      },
+      {
+        "card6": "credit",
+        "count": 148986,
+        "frauds": 9950,
+        "fraud_rate": 0.0667847986
+      },
+      {
+        "card6": "missing",
+        "count": 1571,
+        "frauds": 39,
+        "fraud_rate": 0.0248249523
+      },
+      {
+        "card6": "debit or credit",
+        "count": 30,
+        "frauds": 0,
+        "fraud_rate": 0.0
+      },
+      {
+        "card6": "charge card",
+        "count": 15,
+        "frauds": 0,
+        "fraud_rate": 0.0
+      }
+    ],
+    "P_emaildomain": [
+      {
+        "P_emaildomain": "gmail.com",
+        "count": 228355,
+        "frauds": 9943,
+        "fraud_rate": 0.0435418537
+      },
+      {
+        "P_emaildomain": "yahoo.com",
+        "count": 100934,
+        "frauds": 2297,
+        "fraud_rate": 0.0227574455
+      },
+      {
+        "P_emaildomain": "missing",
+        "count": 94456,
+        "frauds": 2790,
+        "fraud_rate": 0.0295375625
+      },
+      {
+        "P_emaildomain": "hotmail.com",
+        "count": 45250,
+        "frauds": 2396,
+        "fraud_rate": 0.0529502762
+      },
+      {
+        "P_emaildomain": "anonymous.com",
+        "count": 36998,
+        "frauds": 859,
+        "fraud_rate": 0.0232174712
+      },
+      {
+        "P_emaildomain": "aol.com",
+        "count": 28289,
+        "frauds": 617,
+        "fraud_rate": 0.0218105978
+      },
+      {
+        "P_emaildomain": "comcast.net",
+        "count": 7888,
+        "frauds": 246,
+        "fraud_rate": 0.0311866126
+      },
+      {
+        "P_emaildomain": "icloud.com",
+        "count": 6267,
+        "frauds": 197,
+        "fraud_rate": 0.0314344982
+      },
+      {
+        "P_emaildomain": "outlook.com",
+        "count": 5096,
+        "frauds": 482,
+        "fraud_rate": 0.0945839874
+      },
+      {
+        "P_emaildomain": "msn.com",
+        "count": 4092,
+        "frauds": 90,
+        "fraud_rate": 0.0219941349
+      },
+      {
+        "P_emaildomain": "att.net",
+        "count": 4033,
+        "frauds": 30,
+        "fraud_rate": 0.0074386313
+      },
+      {
+        "P_emaildomain": "live.com",
+        "count": 3041,
+        "frauds": 84,
+        "fraud_rate": 0.0276224926
+      },
+      {
+        "P_emaildomain": "sbcglobal.net",
+        "count": 2970,
+        "frauds": 12,
+        "fraud_rate": 0.004040404
+      },
+      {
+        "P_emaildomain": "verizon.net",
+        "count": 2705,
+        "frauds": 22,
+        "fraud_rate": 0.0081330869
+      },
+      {
+        "P_emaildomain": "ymail.com",
+        "count": 2396,
+        "frauds": 50,
+        "fraud_rate": 0.0208681135
+      }
+    ],
+    "DeviceType": [
+      {
+        "DeviceType": "missing",
+        "count": 449730,
+        "frauds": 9452,
+        "fraud_rate": 0.0210170547
+      },
+      {
+        "DeviceType": "desktop",
+        "count": 85165,
+        "frauds": 5554,
+        "fraud_rate": 0.0652145835
+      },
+      {
+        "DeviceType": "mobile",
+        "count": 55645,
+        "frauds": 5657,
+        "fraud_rate": 0.1016623237
+      }
+    ],
+    "has_identity": [
+      {
+        "has_identity": "0",
+        "count": 446307,
+        "frauds": 9345,
+        "fraud_rate": 0.020938502
+      },
+      {
+        "has_identity": "1",
+        "count": 144233,
+        "frauds": 11318,
+        "fraud_rate": 0.078470253
+      }
+    ]
+  },
+  "missing_by_group": {
+    "C": 0.0,
+    "D": 0.581512626861291,
+    "M": 0.4992332817797646,
+    "V": 0.4303846896590721
+  },
+  "top_signals": [
+    {
+      "feature": "C4",
+      "auc": 0.6928206121996856,
+      "strength": 0.3856412243993712,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "C8",
+      "auc": 0.6895016881717625,
+      "strength": 0.379003376343525,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "C10",
+      "auc": 0.6845122522513896,
+      "strength": 0.3690245045027791,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V201",
+      "auc": 0.6844543617468489,
+      "strength": 0.36890872349369785,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V199",
+      "auc": 0.6836801137192949,
+      "strength": 0.36736022743858987,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V200",
+      "auc": 0.6829650877972808,
+      "strength": 0.36593017559456165,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V168",
+      "auc": 0.6826714370984633,
+      "strength": 0.3653428741969267,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V171",
+      "auc": 0.6823209383192492,
+      "strength": 0.36464187663849845,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V204",
+      "auc": 0.6820925254808569,
+      "strength": 0.3641850509617137,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V203",
+      "auc": 0.6818981263398332,
+      "strength": 0.3637962526796663,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V170",
+      "auc": 0.6814840177804946,
+      "strength": 0.3629680355609892,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V167",
+      "auc": 0.6810679726125186,
+      "strength": 0.3621359452250372,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V178",
+      "auc": 0.6810320997124385,
+      "strength": 0.362064199424877,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V190",
+      "auc": 0.6809296818141274,
+      "strength": 0.36185936362825477,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V212",
+      "auc": 0.6808737388718932,
+      "strength": 0.36174747774378635,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V179",
+      "auc": 0.6807316884092598,
+      "strength": 0.3614633768185196,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V213",
+      "auc": 0.6805341667423936,
+      "strength": 0.3610683334847873,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V202",
+      "auc": 0.6804106195821589,
+      "strength": 0.36082123916431774,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V187",
+      "auc": 0.6798529434770632,
+      "strength": 0.3597058869541263,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V177",
+      "auc": 0.6792934070738891,
+      "strength": 0.35858681414777815,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V211",
+      "auc": 0.6790648547587812,
+      "strength": 0.3581297095175624,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V189",
+      "auc": 0.6789903234406541,
+      "strength": 0.35798064688130826,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "id_17",
+      "auc": 0.6777459107236168,
+      "strength": 0.35549182144723357,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V176",
+      "auc": 0.6774528792722068,
+      "strength": 0.35490575854441353,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V188",
+      "auc": 0.6774277614143638,
+      "strength": 0.35485552282872757,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V186",
+      "auc": 0.676846763122858,
+      "strength": 0.35369352624571593,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V258",
+      "auc": 0.6733300461422056,
+      "strength": 0.3466600922844112,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V218",
+      "auc": 0.6726698466184563,
+      "strength": 0.3453396932369126,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V219",
+      "auc": 0.6721986354884838,
+      "strength": 0.3443972709769676,
+      "direction": "higher=fraudier"
+    },
+    {
+      "feature": "V264",
+      "auc": 0.6719341796030232,
+      "strength": 0.3438683592060463,
+      "direction": "higher=fraudier"
+    }
+  ],
+  "attack_surface": [
+    {
+      "index": "TransactionAmt",
+      "present_fraud": 1.0,
+      "present_legit": 1.0,
+      "n_unique": 20902
+    },
+    {
+      "index": "hour",
+      "present_fraud": 1.0,
+      "present_legit": 1.0,
+      "n_unique": 24
+    },
+    {
+      "index": "P_emaildomain",
+      "present_fraud": 0.8649760441,
+      "present_legit": 0.8391477459,
+      "n_unique": 59
+    },
+    {
+      "index": "R_emaildomain",
+      "present_fraud": 0.5433383342,
+      "present_legit": 0.2212126476,
+      "n_unique": 60
+    },
+    {
+      "index": "DeviceType",
+      "present_fraud": 0.5425640033,
+      "present_legit": 0.2274157406,
+      "n_unique": 2
+    },
+    {
+      "index": "DeviceInfo",
+      "present_fraud": 0.4165416445,
+      "present_legit": 0.1931276398,
+      "n_unique": 1779
+    },
+    {
+      "index": "id_30",
+      "present_fraud": 0.1665779412,
+      "present_legit": 0.1300684183,
+      "n_unique": 75
+    },
+    {
+      "index": "id_31",
+      "present_fraud": 0.540628176,
+      "present_legit": 0.2265594155,
+      "n_unique": 130
+    },
+    {
+      "index": "id_33",
+      "present_fraud": 0.1627546823,
+      "present_legit": 0.1227036711,
+      "n_unique": 260
+    }
+  ]
+}
